@@ -1,0 +1,19 @@
+<p>quiz index</p>
+
+
+<p>List of the previous quizzes</p>
+
+<% @user.quizzes.each do |quiz| %>
+<ul>
+  <li> Result = <%= quiz.result %>
+      <%= link_to "See details of Quiz#{quiz.id}", quiz_path(quiz.id) %>
+
+
+  </li>
+</ul>
+    <% end %>
+
+
+<p><%= link_to "Home",  root_path, class:"btn-flat"%></p>
+
+

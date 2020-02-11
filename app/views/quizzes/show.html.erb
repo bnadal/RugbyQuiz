@@ -1,0 +1,31 @@
+<p>quiz show</p>
+
+
+
+<% @questions.each do |question| %>
+<ul>
+  <li>
+    <%= "Question #{question.id} - Category: #{question.category}" %> -- <%= question.question %>
+  </li>
+</ul>
+<% end %>
+
+<% @goodAnswer.each do |ga| %>
+<%# I will try to have a nice display with bootstrap. The idea is to put the answer next to the question.
+Example : Question 1 : xxx ?  -- Answer 1 : abcd %>
+  <ul>
+  <li>
+    <%= "Answer #{ga.question_id}" %> -- <%= ga.choice %>
+  </li>
+</ul>
+
+
+<% end %>
+
+
+<p><%= link_to "Home",  root_path, class:"btn-flat"%></p>
+
+
+
+
+

@@ -1,0 +1,38 @@
+<p>quiz new</p>
+
+<div class="lo--main-container">
+
+<div class="div-for-headers"> <h1>Test</h1> </div>
+
+<%= simple_form_for @quiz do |f| %>
+
+<div class="form">
+
+  <div class= "lo--circle">
+    <%= f.input :result, label:false, input_html: { value: @default_value, class: "lo--btn-display", type: "" } %>
+  </div>
+
+  <div id="form_counters_submit">
+
+    <div class="consumptionbtns">
+      <a class="lo--button-circle" href="#" id="counterA">A</a>
+      <a class="lo--button-circle" href="#" id="counterB">B</a>
+      <a class="lo--button-circle" href="#" id="counterC">C</a>
+      <a class="lo--button-circle" href="#" id="counterD">D</a>
+    </div>
+    <%= f.button :button, "Submit", class: "lo--button-white"  %>
+
+   <!-- <a class="lo--button-circle" href="#" id="counter+">+</a> -->
+
+    <% end %>
+
+  </div>
+
+</div>
+
+
+
+<%= javascript_pack_tag 'form_incrementation' %>
+
+
+</div>
